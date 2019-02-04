@@ -14,11 +14,11 @@ This algorithm has complexity = O(2^n), because we have to check all combination
 ## Project structure
 The project is structured in a simple way that allows as much flexibility and specialization for each component (i.e. separation of concerns) as possible. The general structure of the program is as follows:
 
-**data**: This package contains the POJOs for Item and PackageItem
-**engine**: The engine is the "brain" of the program, i.e. it contains the algorithm which will be applied on the data
-**service**: The service package contains the services used in the software, which in this case contains the file service
-**factory**: The factory classes follow the Factory design pattern, which means they are responsible for creating and instantiating other classes.
-**utils**: This package contains static utils classes, which perform specific actions.
+- **data**: This package contains the POJOs for Item and PackageItem
+- **engine**: The engine is the "brain" of the program, i.e. it contains the algorithm which will be applied on the data
+- **service**: The service package contains the services used in the software, which in this case contains the file service
+- **factory**: The factory classes follow the Factory design pattern, which means they are responsible for creating and instantiating other classes.
+- **utils**: This package contains static utils classes, which perform specific actions.
 
 In addition to the core classes, we have the jUnit tests, which cover most the classes and methods within them using predefined sets of data.
 
