@@ -1,9 +1,9 @@
-# Mobiquity inc - Packer challenge
+# Packer challenge implementation
 
 by Waddah Ajaj ( waddah.ajaj@gmail.com )
 
 ## Introduction
-This assignment is part of the recruitment process for Mobiquity inc. The goal is to write a software that finds the optimal list of items to include in a bag with a weight limit. The items have properties such as index number, weight and cost. For each list of items and bag maximum weight, we find the best list of items which offer the maximum cost below the allowed weight. If different sets of items share the same cost, we choose the ones with least weight.
+The goal of this project is to write a software that finds the optimal list of items to include in a bag with a weight limit. The items have properties such as index number, weight and cost. For each list of items and bag maximum weight, we find the best list of items which offer the maximum cost below the allowed weight. If different sets of items share the same cost, we choose the ones with least weight.
 
 ## Algorithm
 The problem is a typical representation of that of a 0/1 Knapsack problem. While the most effective solutions for that problem are normally implemented using dynamic programming, we can't use it here because the weight is a real number instead of an integer, which means we can't iterate through a list of weight intervals. Since the number of items in the list is fairly small (<=15 items), I opted instead for a brute force algorithm. What the algorithm does is to create all possible subsets of the initial list (power subsets), and check for the one with the maximum value below the maximum weight. Although some optimizations could be made to that algorithm (like checking before hand which items could not be possibly included, thus scaling down the initial list), but for this test purposes, the current implementation should be fine.
